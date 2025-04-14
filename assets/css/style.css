@@ -1,0 +1,35 @@
+/* Additional styling for the game elements */
+#game-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background-color: #f8f9fa;
+}
+
+#narrator {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+.direction-container {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.question-text {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.direction-button {
+  min-width: 120px;
+}
