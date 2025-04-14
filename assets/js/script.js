@@ -6,15 +6,16 @@ let west = document.getElementById('west');
 let east = document.getElementById('east');
 
 
-// Direction questions (these are new)
-let northQuestion = document.getElementById('north-question');
-let southQuestion = document.getElementById('south-question');
-let eastQuestion = document.getElementById('east-question');
-let westQuestion = document.getElementById('west-question');
+// Get the parent containers for each button
+let northContainer = north.closest('.direction-container');
+let southContainer = south.closest('.direction-container');
+let eastContainer = east.closest('.direction-container');
+let westContainer = west.closest('.direction-container');
 
 
-// what we need is a array of areas/room
-// each room has a id, a name, a description, exits,
+
+// First we need an array of areas/room
+// Each room has an id, a name, a description, exits, button text
 const rooms = [
     {
         id: 0,
@@ -24,6 +25,12 @@ const rooms = [
         east: 1,
         north: 6,
         south: 0,
+        buttonText: {
+          north: "Investigate the faint light up north?",
+          east: "Check the door that's slightly ajar",
+          west: "Peek into the adjacent cell",
+          south: "Examine your own cell more carefully"
+      }
         
     },
     {
@@ -34,6 +41,9 @@ const rooms = [
         east: -1,
         north: -1,
         south: -1,
+        buttonText: {
+          west: "Return to your cell"
+      }
        
     },
     {
@@ -44,6 +54,11 @@ const rooms = [
         east: 0,
         north: 4,
         south: -1,
+        buttonText: {
+          west: "Enter the long hallway",
+          east: "Return to your original cell",
+          north: "Sneak into the guard room"
+      }
         
     },
     {
@@ -54,6 +69,10 @@ const rooms = [
       east: 2,
       north: -1,
       south: 5,
+      buttonText: {
+        east: "Go back to the cell area",
+        south: "Check out the storage room"
+    }
       
   },
   {
@@ -64,6 +83,9 @@ const rooms = [
       east: -1,
       north: -1,
       south: 2,
+      buttonText: {
+        south: "Hurry back to the empty cell"
+    }
      
   },
   {
@@ -74,6 +96,9 @@ const rooms = [
       east: -1,
       north: 3,
       south: -1,
+      buttonText: {
+        north: "Return to the hallway"
+    }
      
   },
   {
@@ -84,6 +109,9 @@ const rooms = [
       east: -1,
       north: -1,
       south: 5,
+      buttonText: {
+        south: "Go back inside through the door"
+    }
     
   },
 ]
@@ -111,36 +139,73 @@ function handleExits(currentRoom) {
     // Set up the exits
 
     if (rooms[currentRoom].north != -1) {
+
+        // Get custom button text or use default
+        const buttonText = rooms[currentRoom].buttonText?.north || "Go North";
+        
+        // Show the button and set its text
         north.style.display = "block";
-        north.innerText = "Go North";
+        north.innerText = buttonText;
         north.addEventListener('click', () => move(rooms[currentRoom].north));
 
+        // Show the container
+        northContainer.style.display = "block";
+
     } else {
+        // Hide both the button and its container
         north.style.display = "none";
+        northContainer.style.display = "none";
     }
     if (rooms[currentRoom].south != -1) {
+        // Get custom button text or use default
+        const buttonText = rooms[currentRoom].buttonText?.south || "Go South";
+        
+        // Show the button and set its text
         south.style.display = "block";
-        south.innerText = "Go South";
+        south.innerText = buttonText;
         south.addEventListener('click', () => move(rooms[currentRoom].south));
 
+        // Show the container
+        southContainer.style.display = "block";
+
       } else {
+        // Hide both the button and its container
         south.style.display = "none";
+        southContainer.style.display = "none";
     }
     if (rooms[currentRoom].west != -1) {
+        // Get custom button text or use default
+        const buttonText = rooms[currentRoom].buttonText?.west || "Go West";
+        
+        // Show the button and set its text
         west.style.display = "block";
-        west.innerText = "Go West";
+        west.innerText = buttonText;
         west.addEventListener('click', () => move(rooms[currentRoom].west));
 
-    } else {
-        west.style.display = "none";
-    }
-    if (rooms[currentRoom].east != -1) {
-        east.style.display = "block";
-        east.innerText = "Go East";
-        east.addEventListener('click', () => move(rooms[currentRoom].east));
+        // Show the container
+        westContainer.style.display = "block";
 
     } else {
+      // Hide both the button and its container
+        west.style.display = "none";
+        westContainer.style.display = "none";
+    }
+    if (rooms[currentRoom].east != -1) {
+        // Get custom button text or use default
+        const buttonText = rooms[currentRoom].buttonText?.east || "Go East";
+
+        // Show the button and set its text
+        east.style.display = "block";
+        east.innerText = buttonText;
+        east.addEventListener('click', () => move(rooms[currentRoom].east));
+
+        // Show the container
+        eastContainer.style.display = "block";
+
+    } else {
+        // Hide both the button and its container
         east.style.display = "none";
+        eastContainer.style.display = "none";
     }
 }
 
