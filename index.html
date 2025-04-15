@@ -17,35 +17,43 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <header class="bg-dark text-white p-3 text-center">
-      <h1>Adventure Game</h1>
+
+    <!-- Fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lilita+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet"> 
+
+</head>
+  <body class="d-flex flex-column min-vh-100 container">
+    <header class="mt-5 p-3 text-center">
+      <h1>Choose Your Own Adventure</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lectus justo, iaculis id cursus euismod.</p>
     </header>
 
     <main>
       <div id="game-container" class="container">
         <div id="narrator" class="mb-4"></div>
         
-        <div id="direction" class="row">
+        <div id="direction" class="row justify-content-center align-items-center">
           <!-- North direction -->
-          <div class="col-md-6 col-lg-3 direction-container">
-            <button id="north" class="btn btn-primary direction-button"></button>
+          <div class="col-md-6 col-lg-6 direction-container">
+            <button id="north" class="btn direction-button"></button>
           </div>
           
           <!-- West direction -->
-          <div class="col-md-6 col-lg-3 direction-container">
-            <button id="west" class="btn btn-primary direction-button"></button>
+          <div class="col-md-6 col-lg-6 direction-container">
+            <button id="west" class="btn direction-button"></button>
           </div>
           
           <!-- East direction -->
-          <div class="col-md-6 col-lg-3 direction-container">
-            <button id="east" class="btn btn-primary direction-button"></button>
+          <div class="col-md-6 col-lg-6 direction-container">
+            <button id="east" class="btn direction-button"></button>
           </div>
           
           <!-- South direction -->
-          <div class="col-md-6 col-lg-3 direction-container">
-            <button id="south" class="btn btn-primary direction-button"></button>
+          <div class="col-md-6 col-lg-6 direction-container">
+            <button id="south" class="btn direction-button"></button>
           </div>
         </div>
       </div>

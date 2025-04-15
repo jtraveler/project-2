@@ -1,3 +1,4 @@
+
 // Direction Buttons
 let narrator = document.getElementById('narrator');
 let north = document.getElementById('north');
@@ -17,22 +18,27 @@ let westContainer = west.closest('.direction-container');
 // First we need an array of areas/room
 // Each room has an id, a name, a description, exits, button text
 const rooms = [
-    {
-        id: 0,
-        name: "cell",
-        description: "You wake up in a dim prison cell. There's a small cot and a bucket in the corner. Exits are visible to the east, north and west.",
-        west: 2,
-        east: 1,
-        north: 6,
-        south: 0,
-        buttonText: {
-          north: "Investigate the faint light up north?",
-          east: "Check the door that's slightly ajar",
-          west: "Peek into the adjacent cell",
-          south: "Examine your own cell more carefully"
-      }
-        
+  {
+    id: 0,
+    name: "cell",
+    description: "You wake up in a dim prison cell. There's a small cot and a bucket in the corner. Exits are visible to the east, north and west.",
+    west: 2,
+    east: 1,
+    north: 6,
+    south: 0,
+    buttonText: {
+      north: "Investigate the faint light up north?",
+      east: "Check the door that's slightly ajar",
+      west: "Peek into the adjacent cell",
+      south: "Examine your own cell more carefully"
     },
+    // Adding the visual for this room
+    media: {
+      type: "image", 
+      src: "assets/images/test.jpg", 
+      alt: "A dim prison cell" 
+    }
+},
     {
         id: 1,
         name: "kitchen",
@@ -43,6 +49,12 @@ const rooms = [
         south: -1,
         buttonText: {
           west: "Return to your cell"
+      },
+      // Adding the visual for this room
+      media: {
+        type: "image", // can be "image" or "video"
+        src: "assets/images/test.jpg", // path to media file
+        alt: "A dim prison cell" // for accessibility
       }
        
     },

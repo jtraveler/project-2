@@ -1,18 +1,43 @@
+body {
+
+  background: #fff5c4;
+  font-family: 'Poppins', san-serif;
+  font-size: 16px;
+  color: #2f1a00;
+  align-items: center;;
+}
+
+header {
+
+  max-width: 500px;
+}
+
+main {width: 100%;}
+
+h1 {
+
+  font-family: 'Fredoka', san-serif;
+  color: #d66a1e;
+  text-align: center;
+  font-size: 50px;
+    line-height: 50px;
+}
+
+
+
 /* Additional styling for the game elements */
 #game-container {
   max-width: 800px;
   margin: 30px auto;
-  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  background-color: #f8f9fa;
 }
 
+
+
 #narrator {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 30px;
   padding: 15px;
-  background-color: #e9ecef;
   border-radius: 5px;
   min-height: 100px;
 }
@@ -24,12 +49,27 @@
   align-items: flex-start;
 }
 
-.question-text {
-  margin-bottom: 8px;
-  font-weight: 500;
-  color: #495057;
+/* Makes the 3rd and 4th options have margin right auto to 
+push it to the left if one of them is on the row by itself */
+.direction-container:nth-child(n + 3) {
+  margin-right: auto;
 }
 
 .direction-button {
   min-width: 120px;
+  font-size: 1.1rem;
+  background-color: #ffebaf;
+  border-radius: 50px;
+  width: 100%;
+  padding: 20px;
+  border: solid 2px #ffebaf;
+  transition: background-color .5s ease-in-out;
+  transition: border .8s ease-in-out;
+  
 }
+
+.direction-button:hover {
+  border: solid 2px #d66a1e;
+  
+}
+
