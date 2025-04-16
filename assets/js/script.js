@@ -35,3 +35,92 @@ const rooms = [
         south: -1,
     },
 ]
+
+
+let currentRoom = 0;
+/**
+ * This function handles the game flow
+ */
+function gameMaster() {
+    readDescrption(currentRoom);
+    handleExits(currentRoom);
+}
+function readDescrption(currentRoom) {
+    narrator.innerText = rooms[currentRoom].description;
+}
+function handleExits(currentRoom) {
+    if (rooms[currentRoom].north != -1) {
+        north.style.display = "block";
+        north.innerText = "Go North";
+        north.addEventListener('click', () => move(rooms[currentRoom].north));
+    } else {
+        north.style.visibility = "none";
+    }
+    if (rooms[currentRoom].south != -1) {
+        south.style.display = "block";
+        south.innerText = "Go South";
+        south.addEventListener('click', () => move(rooms[currentRoom].south));
+    } else {
+        south.style.display = "none";
+    }
+    if (rooms[currentRoom].west != -1) {
+        west.style.visibility = "visible";
+        west.innerText = "Go West";
+        west.addEventListener('click', () => move(rooms[currentRoom].west));
+    } else {
+        west.style.display = "none";
+    }
+    if (rooms[currentRoom].east != -1) {
+        east.style.visibility = "visible";
+        east.innerText = "Go East";
+        east.addEventListener('click', () => move(rooms[currentRoom].east));
+    } else {
+        east.style.display = "none";
+    }
+}
+
+let currentRoom = 0;
+/**
+ * This function handles the game flow
+ */
+function gameMaster() {
+    readDescrption(currentRoom);
+    handleExits(currentRoom);
+}
+function readDescrption(currentRoom) {
+    narrator.innerText = rooms[currentRoom].description;
+}
+function handleExits(currentRoom) {
+    if (rooms[currentRoom].north != -1) {
+        north.style.display = "block";
+        north.innerText = "Go North";
+        north.addEventListener('click', () => move(rooms[currentRoom].north));
+    } else {
+        north.style.visibility = "none";
+    }
+    if (rooms[currentRoom].south != -1) {
+        south.style.display = "block";
+        south.innerText = "Go South";
+        south.addEventListener('click', () => move(rooms[currentRoom].south));
+    } else {
+        south.style.display = "none";
+    }
+    if (rooms[currentRoom].west != -1) {
+        west.style.visibility = "visible";
+        west.innerText = "Go West";
+        west.addEventListener('click', () => move(rooms[currentRoom].west));
+    } else {
+        west.style.display = "none";
+    }
+    if (rooms[currentRoom].east != -1) {
+        east.style.visibility = "visible";
+        east.innerText = "Go East";
+        east.addEventListener('click', () => move(rooms[currentRoom].east));
+    } else {
+        east.style.display = "none";
+    }
+}
+function move(destination) {
+    console.log("you in room: ", destination);
+}
+gameMaster();
