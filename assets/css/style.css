@@ -30,6 +30,37 @@ h1 {
   margin-bottom: 200px;
 }
 
+/* Media container styling */
+#room-media {
+  max-width: 650px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 10px solid #fecf23;
+  background-color: black;
+}
+
+#room-media img {
+  max-width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#room-media video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fade transitions */
+.fade-out {
+  opacity: 0 !important;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
 
 /* Narrator styling */
 #narrator {
