@@ -118,6 +118,13 @@ function readDescrption(currentRoom) {
  * and attaches event listeners to them
  */
 function handleExits(currentRoom) {
+
+    // Replace each button with a clone and update our reference
+    north = replaceButton(north);
+    south = replaceButton(south);
+    east = replaceButton(east);
+    west = replaceButton(west);
+
     // NORTH direction
     if (rooms[currentRoom].north != -1) {
         // There is an exit to the north
@@ -127,7 +134,7 @@ function handleExits(currentRoom) {
         // When clicked, move to the room in that direction
         north.addEventListener('click', () => move(rooms[currentRoom].north));
     } else {
-        north.style.visibility = "none";
+        north.style.display = "none";
     }
 
     // SOUTH direction
@@ -170,46 +177,19 @@ function handleExits(currentRoom) {
 }
 
 
+
 /**
- * This function handles the game flow
+ * Helper function to replace a button with a clone
+ * This removes all event listeners
  */
-function gameMaster() {
-    readDescrption(currentRoom);
-    handleExits(currentRoom);
+function replaceButton(button) {
+
+  const newButton = button.cloneNode(true); // Create an exact copy of thr button
+  button.parentNode.replaceChild(newButton, button); // Replace the old button with the new
+  return newButton; // Return the new button to use
 }
-function readDescrption(currentRoom) {
-    narrator.innerText = rooms[currentRoom].description;
-}
-function handleExits(currentRoom) {
-    if (rooms[currentRoom].north != -1) {
-        north.style.display = "block";
-        north.innerText = "Go North";
-        north.addEventListener('click', () => move(rooms[currentRoom].north));
-    } else {
-        north.style.visibility = "none";
-    }
-    if (rooms[currentRoom].south != -1) {
-        south.style.display = "block";
-        south.innerText = "Go South";
-        south.addEventListener('click', () => move(rooms[currentRoom].south));
-    } else {
-        south.style.display = "none";
-    }
-    if (rooms[currentRoom].west != -1) {
-        west.style.visibility = "visible";
-        west.innerText = "Go West";
-        west.addEventListener('click', () => move(rooms[currentRoom].west));
-    } else {
-        west.style.display = "none";
-    }
-    if (rooms[currentRoom].east != -1) {
-        east.style.visibility = "visible";
-        east.innerText = "Go East";
-        east.addEventListener('click', () => move(rooms[currentRoom].east));
-    } else {
-        east.style.display = "none";
-    }
-}
+
+
 
 /**
  * Move to a new room when a direction button is clicked
