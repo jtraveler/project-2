@@ -1,3 +1,5 @@
+// Add this with your other DOM element references at the top
+let roomMedia = document.getElementById('room-media');
 
 // Direction Buttons
 let narrator = document.getElementById('narrator');
@@ -19,123 +21,204 @@ let westContainer = west.closest('.direction-container');
 // Each room has an id, a name, a description, exits, button text
 const rooms = [
   {
-    id: 0,
-    name: "cell",
-    description: "You wake up in a dim prison cell. There's a small cot and a bucket in the corner. Exits are visible to the east, north and west.",
-    west: 2,
-    east: 1,
-    north: 6,
-    south: 0,
+      id: 0,
+      name: "cell",
+      description: "You wake up in a dim prison cell. There's a small cot and a bucket in the corner. Exits are visible to the east, north and west.",
+      west: 2,
+      east: 1,
+      north: 6,
+      south: 0,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        east: "Check the door that's slightly ajar",
+        west: "Peek into the adjacent cell",
+        south: "Examine your own cell more carefully"
+      },
+      media: {
+        type: "image", 
+        src: "assets/images/test.jpg", 
+        alt: "A dim prison cell" 
+      }
+  },
+  {
+      id: 1,
+      name: "kitchen",
+      description: "The prison kitchen is filled with the smell of stale bread. A large pot sits over a cold hearth. The only exit is back west.",
+      west: 0,
+      east: -1,
+      north: -1,
+      south: -1,
+      buttonText: {
+        west: "Return to your cell"
+      },
+      media: {
+        type: "image", 
+        src: "assets/images/test.jpg", 
+        alt: "A prison kitchen with a cold hearth" 
+      }
+  },
+  {
+      id: 2,
+      name: "cell",
+      description: "You're in a bathtub holding a glass of juice ....",
+      west: 3,
+      east: 0,
+      north: 4,
+      south: -1,
+      buttonText: {
+        west: "Enter the long hallway",
+        east: "Return to your original cell",
+        north: "Sneak into the guard room"
+      },
+      media: {
+        type: "image", 
+        src: "assets/images/test.jpg", 
+        alt: "A bathtub with juice" 
+      }
+  },
+  {
+    id: 3,
+    name: "hallway",
+    description: "You're in a long hallway with torches on the walls.",
+    west: -1,
+    east: 2,
+    north: -1,
+    south: 5,
     buttonText: {
-      north: "Investigate the faint light up north?",
-      east: "Check the door that's slightly ajar",
-      west: "Peek into the adjacent cell",
-      south: "Examine your own cell more carefully"
+      east: "Go back to the cell area",
+      south: "Check out the storage room"
     },
     media: {
       type: "image", 
       src: "assets/images/test.jpg", 
-      alt: "A dim prison cell" 
+      alt: "A long hallway with torches" 
     }
-},
-    {
-        id: 1,
-        name: "kitchen",
-        description: "The prison kitchen is filled with the smell of stale bread. A large pot sits over a cold hearth. The only exit is back west.",
-        west: 0,
-        east: -1,
-        north: -1,
-        south: -1,
-        buttonText: {
-          west: "Return to your cell"
-      },
-      // Adding the visual for this room
-      media: {
-        type: "image", // can be "image" or "video"
-        src: "assets/images/test.jpg", // path to media file
-        alt: "A dim prison cell" // for accessibility
-      }
-       
+  },
+  {
+    id: 4,
+    name: "guard room",
+    description: "This appears to be a guard room. There's a table with some playing cards.",
+    west: -1,
+    east: -1,
+    north: -1,
+    south: 2,
+    buttonText: {
+      south: "Hurry back to the empty cell"
     },
-    {
-        id: 2,
-        name: "cell",
-        description: "You're in a bathtub holding a glass of juice ....",
-        west: 3,
-        east: 0,
-        north: 4,
-        south: -1,
-        buttonText: {
-          west: "Enter the long hallway",
-          east: "Return to your original cell",
-          north: "Sneak into the guard room"
-      }
-        
+    media: {
+      type: "image", 
+      src: "assets/images/test.jpg", 
+      alt: "A guard room with a table and cards" 
+    }
+  },
+  {
+    id: 5,
+    name: "storage",
+    description: "A small storage area with some barrels and crates.",
+    west: -1,
+    east: -1,
+    north: 3,
+    south: -1,
+    buttonText: {
+      north: "Return to the hallway"
     },
-    {
-      id: 3,
-      name: "hallway",
-      description: "You're in a long hallway with torches on the walls.",
-      west: -1,
-      east: 2,
-      north: -1,
-      south: 5,
-      buttonText: {
-        east: "Go back to the cell area",
-        south: "Check out the storage room"
+    media: {
+      type: "image", 
+      src: "assets/images/test.jpg", 
+      alt: "A storage room with barrels and crates" 
     }
-      
   },
   {
-      id: 4,
-      name: "guard room",
-      description: "This appears to be a guard room. There's a table with some playing cards.",
-      west: -1,
-      east: -1,
-      north: -1,
-      south: 2,
-      buttonText: {
-        south: "Hurry back to the empty cell"
+    id: 6,
+    name: "courtyard",
+    description: "You've entered a small courtyard. Fresh air at last!",
+    west: -1, 
+    east: -1,
+    north: -1,
+    south: 5,
+    buttonText: {
+      south: "Go back inside through the door"
+    },
+    media: {
+      type: "video", 
+      src: "assets/images/test.jpg",
+      alt: "A small prison courtyard" 
     }
-     
   },
-  {
-      id: 5,
-      name: "storage",
-      description: "A small storage area with some barrels and crates.",
-      west: -1,
-      east: -1,
-      north: 3,
-      south: -1,
-      buttonText: {
-        north: "Return to the hallway"
-    }
-     
-  },
-  {
-      id: 6,
-      name: "courtyard",
-      description: "You've entered a small courtyard. Fresh air at last!",
-      west: -1, 
-      east: -1,
-      north: -1,
-      south: 5,
-      buttonText: {
-        south: "Go back inside through the door"
-    }
-    
-  },
-]
+];
 let currentRoom = 0;
 /**
  * This function handles the game flow
  */
 function gameMaster() {
     readDescrption(currentRoom);
+    updateRoomMedia(currentRoom);
     handleExits(currentRoom);
 }
 function readDescrption(currentRoom) {
     narrator.innerText = rooms[currentRoom].description;
+}
+
+function updateRoomMedia(roomId) {
+  const room = rooms[roomId];
+  
+  // First fade out the current media
+  const currentMedia = roomMedia.querySelector('img, video');
+  if (currentMedia) {
+      currentMedia.classList.add('fade-out');
+      
+      // Wait for fade out to complete before changing media
+      setTimeout(() => {
+          // Clear the media container
+          roomMedia.innerHTML = '';
+          
+          // Add the new media based on type
+          if (room.media) {
+              if (room.media.type === "image") {
+                  const img = document.createElement('img');
+                  img.src = room.media.src;
+                  img.alt = room.media.alt;
+                  img.classList.add('fade-out'); // Start faded out
+                  roomMedia.appendChild(img);
+                  
+                  // Trigger reflow/repaint before starting the animation
+                  void img.offsetWidth;
+                  
+                  // Fade in the new image
+                  setTimeout(() => {
+                      img.classList.remove('fade-out');
+                  }, 50);
+              } 
+              else if (room.media.type === "video") {
+                  const video = document.createElement('video');
+                  video.src = room.media.src;
+                  video.controls = true;
+                  video.autoplay = true;
+                  video.muted = true; // Needed for autoplay in most browsers
+                  roomMedia.appendChild(video);
+              }
+          }
+      }, 500); // Match this to your CSS transition time
+  } 
+  else {
+      // No current media, just add the new one
+      if (room.media) {
+          if (room.media.type === "image") {
+              const img = document.createElement('img');
+              img.src = room.media.src;
+              img.alt = room.media.alt;
+              roomMedia.appendChild(img);
+          } 
+          else if (room.media.type === "video") {
+              const video = document.createElement('video');
+              video.src = room.media.src;
+              video.controls = true;
+              video.autoplay = true;
+              video.muted = true;
+              roomMedia.appendChild(video);
+          }
+      }
+  }
 }
 function handleExits(currentRoom) {
 
