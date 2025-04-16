@@ -122,7 +122,7 @@ function handleExits(currentRoom) {
     if (rooms[currentRoom].north != -1) {
         // There is an exit to the north
         north.style.display = "block"; // Make button visible
-        north.innerText = "Go North";
+        north.innerText = "Go North"; // Set button text
 
         // When clicked, move to the room in that direction
         north.addEventListener('click', () => move(rooms[currentRoom].north));
@@ -134,7 +134,7 @@ function handleExits(currentRoom) {
     if (rooms[currentRoom].south != -1) {
         // There is an exit to the south
         south.style.display = "block"; // Make button visible
-        south.innerText = "Go South";
+        south.innerText = "Go South"; // Set button text
 
         // When clicked, move to the room in that direction
         south.addEventListener('click', () => move(rooms[currentRoom].south));
@@ -146,7 +146,7 @@ function handleExits(currentRoom) {
     if (rooms[currentRoom].east != -1) {
       // There is an exit to the east
       east.style.display = "block"; // Make button visible
-      east.innerText = "Go East";
+      east.innerText = "Go East"; // Set button text
 
       // When clicked, move to the room in that direction
       east.addEventListener('click', () => move(rooms[currentRoom].east));
@@ -158,7 +158,7 @@ function handleExits(currentRoom) {
     if (rooms[currentRoom].west != -1) {
         // There is an exit to the west
         west.style.display = "block"; // Make button visible
-        west.innerText = "Go West";
+        west.innerText = "Go West"; // Set button text
 
         // When clicked, move to the room in that direction
         west.addEventListener('click', () => move(rooms[currentRoom].west));
@@ -169,7 +169,7 @@ function handleExits(currentRoom) {
     
 }
 
-let currentRoom = 0;
+
 /**
  * This function handles the game flow
  */
@@ -210,7 +210,18 @@ function handleExits(currentRoom) {
         east.style.display = "none";
     }
 }
+
+/**
+ * Move to a new room when a direction button is clicked
+ */
 function move(destination) {
-    console.log("you in room: ", destination);
+    // Update the current room
+    currentRoom = destination;
+
+    // Update the game display for the new room
+    gameMaster();
+
+    // What room are we currently in
+    console.log("You're in room: ", destination, rooms[destination].name);
 }
 gameMaster();
