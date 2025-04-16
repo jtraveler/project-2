@@ -1,4 +1,4 @@
-const roomMedia = document.getElementById('room-media')
+
 
 // DOM element references to connect the JS to the HTML elements
 let narrator = document.getElementById('narrator'); // The text description area
@@ -6,6 +6,7 @@ let north = document.getElementById('north');
 let south = document.getElementById('south');
 let west = document.getElementById('west');
 let east = document.getElementById('east');
+const roomMedia = document.getElementById('room-media')
 
 // We need an array of areas/rooms
 // Room data - each one has an id, a name, a description, exits, media/visuals
@@ -216,7 +217,7 @@ function handleExits(currentRoom) {
 function updateRoomMedia(roomID) {
 
   // Get the current room object from the rooms array
-  let room = rooms[roomId]
+  const room = rooms[roomId];
 
   // Clear the media container
   roomMedia.innerHTML = '';
@@ -224,7 +225,22 @@ function updateRoomMedia(roomID) {
   // Check if this room has media to display
   if (room.media) {
 
-    console.log("Adding media to room:", roomId)
+    if (room.media.type ==="image") {
+
+      // Create an image elment
+      const img = document.createElement('img');
+
+      // Set the attributes for the image
+      img.src = room.edia.src;
+      img.alt = room.media.alt || 'Room image';
+
+      // Add it to the container
+      roomMedia.appendChild(img);
+
+      console.log("Adding image to:", room.media.src)
+    }
+
+    
   }
 }
 
