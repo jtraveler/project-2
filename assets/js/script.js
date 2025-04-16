@@ -1,9 +1,9 @@
 // DOM element references to connect the JS to the HTML elements
-const narrator = document.getElementById('narrator'); // The text description area
-const north = document.getElementById('north');
-const south = document.getElementById('south');
-const west = document.getElementById('west');
-const east = document.getElementById('east');
+let narrator = document.getElementById('narrator'); // The text description area
+let north = document.getElementById('north');
+let south = document.getElementById('south');
+let west = document.getElementById('west');
+let east = document.getElementById('east');
 
 // We need an array of areas/rooms
 // Room data - each one has an id, a name, a description, exits, media/visuals
@@ -38,16 +38,6 @@ const rooms = [
         east: 0,
         west: 3,
         
-    },
-    {
-      id: 2, // Unique ID for this room
-      name: "cell", // Name of the room
-      description: "you wake in a cell there is a ....",
-      north: 4,
-      south: -1,
-      east: 0,
-      west: 3,
-      
     },
     {
       id: 3, // Unique ID for this room
@@ -130,6 +120,7 @@ function handleExits(currentRoom) {
         // There is an exit to the north
         north.style.display = "block"; // Make button visible
         north.innerText = "Go North"; // Set button text
+        console.log("North button text:", north.textContent)
 
         // When clicked, move to the room in that direction
         north.addEventListener('click', () => move(rooms[currentRoom].north));
@@ -142,6 +133,7 @@ function handleExits(currentRoom) {
         // There is an exit to the south
         south.style.display = "block"; // Make button visible
         south.innerText = "Go South"; // Set button text
+        console.log("South button text:", south.textContent)
 
         // When clicked, move to the room in that direction
         south.addEventListener('click', () => move(rooms[currentRoom].south));
@@ -154,6 +146,7 @@ function handleExits(currentRoom) {
       // There is an exit to the east
       east.style.display = "block"; // Make button visible
       east.innerText = "Go East"; // Set button text
+      console.log("East button text:", east.textContent)
 
       // When clicked, move to the room in that direction
       east.addEventListener('click', () => move(rooms[currentRoom].east));
@@ -166,6 +159,7 @@ function handleExits(currentRoom) {
         // There is an exit to the west
         west.style.display = "block"; // Make button visible
         west.innerText = "Go West"; // Set button text
+        console.log("West button text:", north.textContent)
 
         // When clicked, move to the room in that direction
         west.addEventListener('click', () => move(rooms[currentRoom].west));
