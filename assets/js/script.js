@@ -129,6 +129,9 @@ function gameMaster() {
     // Display the current room description
     readDescrption(currentRoom);
 
+    // Update the media for the current room
+    updateRoomMedia(currentRoom); 
+
     // Set up the available exits/buttons
     handleExits(currentRoom);
 }
@@ -205,6 +208,24 @@ function handleExits(currentRoom) {
     }
 
     
+}
+
+/**
+ * Update the visual media for the current room
+ */
+function updateRoomMedia(roomID) {
+
+  // Get the current room object from the rooms array
+  let room = rooms[roomId]
+
+  // Clear the media container
+  roomMedia.innerHTML = '';
+
+  // Check if this room has media to display
+  if (room.media) {
+
+    console.log("Adding media to room:", roomId)
+  }
 }
 
 
