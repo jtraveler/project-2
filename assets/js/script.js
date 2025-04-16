@@ -1,3 +1,5 @@
+const roomMedia = document.getElementById('room-media')
+
 // DOM element references to connect the JS to the HTML elements
 let narrator = document.getElementById('narrator'); // The text description area
 let north = document.getElementById('north');
@@ -17,6 +19,11 @@ const rooms = [
         south: -1,
         east: 1,
         west: 2,
+        media: {
+          type: "image", 
+          src: "assets/images/prison_cell.jpg", 
+          alt: "A dim prison cell" 
+      }
         
     },
     {
@@ -27,6 +34,11 @@ const rooms = [
         south: -1,
         east: -1,
         west: 0,
+        media: {
+          type: "image",
+          src: "assets/images/test.jpg",
+          alt: "a dim prison cell"
+        }
         
     },
     {
@@ -37,6 +49,11 @@ const rooms = [
         south: -1,
         east: 0,
         west: 3,
+        media: {
+          type: "image",
+          src: "assets/images/test.jpg",
+          alt: "a dim prison cell"
+        }
         
     },
     {
@@ -47,6 +64,11 @@ const rooms = [
       south: -1,
       east: 0,
       west: 3,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "a dim prison cell"
+      }
       
     },
     {
@@ -57,6 +79,11 @@ const rooms = [
       south: -1,
       east: 0,
       west: 3,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "a dim prison cell"
+      }
       
     },
     {
@@ -67,6 +94,11 @@ const rooms = [
       south: -1,
       east: 0,
       west: 3,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "a dim prison cell"
+      }
       
     },
     {
@@ -77,6 +109,11 @@ const rooms = [
       south: -1,
       east: 0,
       west: 3,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "a dim prison cell"
+      }
       
     },
 ]
