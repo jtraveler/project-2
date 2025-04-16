@@ -91,8 +91,10 @@ const rooms = [
     },
 ]
 
-
+// We'll start in the first room (ID 0)
 let currentRoom = 0;
+
+
 /**
  * This function handles the game flow
  */
@@ -104,39 +106,67 @@ function gameMaster() {
     handleExits(currentRoom);
 }
 
-// This function updates the narrator text
+/**
+ * This function updates the narrator text
+ *  */ 
 function readDescrption(currentRoom) {
     narrator.innerText = rooms[currentRoom].description;
 }
+
+/**
+ * This function controls which direction buttons are visible
+ * and attaches event listeners to them
+ */
 function handleExits(currentRoom) {
+    // NORTH direction
     if (rooms[currentRoom].north != -1) {
-        north.style.display = "block";
+        // There is an exit to the north
+        north.style.display = "block"; // Make button visible
         north.innerText = "Go North";
+
+        // When clicked, move to the room in that direction
         north.addEventListener('click', () => move(rooms[currentRoom].north));
     } else {
         north.style.visibility = "none";
     }
+
+    // SOUTH direction
     if (rooms[currentRoom].south != -1) {
-        south.style.display = "block";
+        // There is an exit to the south
+        south.style.display = "block"; // Make button visible
         south.innerText = "Go South";
+
+        // When clicked, move to the room in that direction
         south.addEventListener('click', () => move(rooms[currentRoom].south));
     } else {
         south.style.display = "none";
     }
+
+    // EAST Direction
+    if (rooms[currentRoom].east != -1) {
+      // There is an exit to the east
+      east.style.display = "block"; // Make button visible
+      east.innerText = "Go East";
+
+      // When clicked, move to the room in that direction
+      east.addEventListener('click', () => move(rooms[currentRoom].east));
+    } else {
+        east.style.display = "none";
+    }
+
+    // WEST Direction
     if (rooms[currentRoom].west != -1) {
-        west.style.visibility = "visible";
+        // There is an exit to the west
+        west.style.display = "block"; // Make button visible
         west.innerText = "Go West";
+
+        // When clicked, move to the room in that direction
         west.addEventListener('click', () => move(rooms[currentRoom].west));
     } else {
         west.style.display = "none";
     }
-    if (rooms[currentRoom].east != -1) {
-        east.style.visibility = "visible";
-        east.innerText = "Go East";
-        east.addEventListener('click', () => move(rooms[currentRoom].east));
-    } else {
-        east.style.display = "none";
-    }
+
+    
 }
 
 let currentRoom = 0;
