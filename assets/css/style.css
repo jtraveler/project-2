@@ -1,28 +1,31 @@
 body {
+
   background: #fff5c4;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', san-serif;
   font-size: 16px;
   color: #2f1a00;
+  align-items: center;;
 }
 
 header {
+
   max-width: 500px;
-  margin: 0 auto;
 }
 
-main {
-  width: 100%;
-}
+main {width: 100%;}
 
 h1 {
-  font-family: 'Fredoka', sans-serif;
+
+  font-family: 'Fredoka', san-serif;
   color: #d66a1e;
   text-align: center;
   font-size: 50px;
-  line-height: 50px;
+    line-height: 50px;
 }
 
-/* Game container styling */
+
+
+/* Additional styling for the game elements */
 #game-container {
   max-width: 800px;
   margin: 30px auto;
@@ -30,10 +33,8 @@ h1 {
   margin-bottom: 200px;
 }
 
-/* Media container styling */
 #room-media {
   max-width: 650px;
-  height: 400px;
   overflow: hidden;
   border-radius: 50px;
   margin-bottom: 20px;
@@ -53,7 +54,6 @@ h1 {
   height: auto;
 }
 
-/* Fade transitions */
 .fade-out {
   opacity: 0 !important;
 }
@@ -62,17 +62,16 @@ h1 {
   opacity: 1 !important;
 }
 
-/* Narrator styling */
 #narrator {
   font-size: 1.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   padding: 15px;
   border-radius: 5px;
-  min-height: 100px;
+  height: fit-content;
 }
 
-/* Direction buttons styling */
 #direction {
+
   min-height: 201px;
 }
 
@@ -83,6 +82,20 @@ h1 {
   align-items: flex-start;
 }
 
+/* Makes the 4th options have margin right auto to 
+push it to the left if one of them is on the row by itself */
+.direction-container:nth-child(n + 3) {
+  margin-right: auto;
+}
+
+
+/* Makes the 2nd options have margin right auto to 
+push it to the left if one of them is on the row by itself */
+.direction-container:nth-child(n + 1) {
+  margin-right: auto;
+}
+
+
 .direction-button {
   min-width: 120px;
   font-size: 1.1rem;
@@ -91,18 +104,23 @@ h1 {
   width: 100%;
   padding: 20px;
   border: solid 2px #ffebaf;
-  transition: all 0.5s ease-in-out;
+  transition: background-color .5s ease-in-out;
+  transition: border .8s ease-in-out;
+  
 }
 
 .direction-button:hover {
   border: solid 2px #d66a1e;
-  background-color: #ffdfa0;
+  
 }
 
-/* Responsive design */
+
+
+
+
 @media only screen and (max-width: 450px) {
   #room-media {
-    height: 250px;
+    height: 350px;
   }
   #room-media img {
     height: 100%;

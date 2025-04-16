@@ -22,7 +22,7 @@ const rooms = [
         west: 2,
         media: {
           type: "image", 
-          src: "assets/images/prison_cell.jpg", 
+          src: "assets/images/test.jpg", 
           alt: "A dim prison cell" 
       }
         
@@ -214,7 +214,7 @@ function handleExits(currentRoom) {
 /**
  * Update the visual media for the current room
  */
-function updateRoomMedia(roomID) {
+function updateRoomMedia(roomId) {
 
   // Get the current room object from the rooms array
   const room = rooms[roomId];
@@ -231,7 +231,7 @@ function updateRoomMedia(roomID) {
       const img = document.createElement('img');
 
       // Set the attributes for the image
-      img.src = room.edia.src;
+      img.src = room.media.src;
       img.alt = room.media.alt || 'Room image';
 
       // Add it to the container
