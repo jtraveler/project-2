@@ -30,16 +30,49 @@ h1 {
   max-width: 800px;
   margin: 30px auto;
   border-radius: 8px;
+  margin-bottom: 200px;
 }
 
+#room-media {
+  max-width: 650px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 10px solid #fecf23;
+  background-color: black;
+}
 
+#room-media img {
+  max-width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#room-media video {
+  max-width: 100%;
+  height: auto;
+}
+
+.fade-out {
+  opacity: 0 !important;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
 
 #narrator {
   font-size: 1.4rem;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   padding: 15px;
   border-radius: 5px;
-  min-height: 100px;
+  height: fit-content;
+}
+
+#direction {
+
+  min-height: 201px;
 }
 
 .direction-container {
@@ -49,11 +82,19 @@ h1 {
   align-items: flex-start;
 }
 
-/* Makes the 3rd and 4th options have margin right auto to 
+/* Makes the 4th options have margin right auto to 
 push it to the left if one of them is on the row by itself */
 .direction-container:nth-child(n + 3) {
   margin-right: auto;
 }
+
+
+/* Makes the 2nd options have margin right auto to 
+push it to the left if one of them is on the row by itself */
+.direction-container:nth-child(n + 1) {
+  margin-right: auto;
+}
+
 
 .direction-button {
   min-width: 120px;
@@ -73,3 +114,16 @@ push it to the left if one of them is on the row by itself */
   
 }
 
+
+
+
+
+@media only screen and (max-width: 450px) {
+  #room-media {
+    height: 350px;
+  }
+  #room-media img {
+    height: 100%;
+    max-width: unset;
+  }
+}

@@ -32,7 +32,6 @@ const rooms = [
       west: "Peek into the adjacent cell",
       south: "Examine your own cell more carefully"
     },
-    // Adding the visual for this room
     media: {
       type: "image", 
       src: "assets/images/test.jpg", 
