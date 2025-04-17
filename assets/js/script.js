@@ -226,7 +226,26 @@ function updateRoomMedia(roomId) {
 
     currentImage.classList.add('fade-out');
 
-    setTimeout(() => 500); // .5 sec transition time
+    setTimeout(() => {
+
+      // Clear the media container
+      roomMedia.innerHTML = '';
+    
+      if (room.media && room.media.type === "image") {
+    
+        // Create an image elment
+        const img = document.createElement('img');
+    
+        // Set the attributes for the image
+        img.src = room.media.src;
+        img.alt = room.media.alt || 'Room image';
+    
+        // Add it to the container
+        roomMedia.appendChild(img);
+    
+        console.log("Adding image to:", room.media.src)
+      }
+    }, 500); // .5 sec transition time
   } else {
 
       roomMedia.innerHTML = '';
