@@ -216,31 +216,35 @@ function handleExits(currentRoom) {
  */
 function updateRoomMedia(roomId) {
 
-  // Get the current room object from the rooms array
+  // Get the current room
   const room = rooms[roomId];
+  
+  // Get the current image if there is one
+  const currentImage = roomMedia.querySelector('img');
 
-  // Clear the media container
-  roomMedia.innerHTML = '';
+  if (currentImage) {
 
-  // Check if this room has media to display
-  if (room.media) {
+    currentImage.classList.add('fade-out');
 
-    if (room.media.type ==="image") {
+    setTimeout(() => 500); // .5 sec transition time
+  } else {
 
-      // Create an image elment
-      const img = document.createElement('img');
+      roomMedia.innerHTML = '';
 
-      // Set the attributes for the image
-      img.src = room.media.src;
-      img.alt = room.media.alt || 'Room image';
-
-      // Add it to the container
-      roomMedia.appendChild(img);
-
-      console.log("Adding image to:", room.media.src)
-    }
-
+      if (room.media && room.media.type === "image") {
     
+        // Create an image elment
+        const img = document.createElement('img');
+    
+        // Set the attributes for the image
+        img.src = room.media.src;
+        img.alt = room.media.alt || 'Room image';
+    
+        // Add it to the container
+        roomMedia.appendChild(img);
+    
+       
+      }
   }
 }
 
