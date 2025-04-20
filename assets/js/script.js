@@ -15,14 +15,14 @@ const rooms = [
     {
         id: 0, // Unique ID for this room
         name: "cell", // Name of the room
-        description: "you wake in a cell there is a ....way out are east, north and west",
-        north: 6,
-        south: -1,
-        east: 1,
-        west: 2,
+        description: "Leo’s parents hand him a dusty book. “It belonged to your grandmother,” his mom says. It glows faintly. Leo clutches it with curiosity.",
+        north: 1,
+        south: 2,
+        east: -1,
+        west: -1,
         media: {
           type: "image", 
-          src: "assets/images/test.jpg", 
+          src: "assets/images/story-route-0.jpg", 
           alt: "A dim prison cell" 
       }
         
@@ -30,14 +30,14 @@ const rooms = [
     {
         id: 1, // Unique ID for this room
         name: "kitchen", // Name of the room
-        description: "you wake in a kitchen there is a ....",
-        north: -1,
-        south: -1,
-        east: -1,
-        west: 0,
+        description: "Leo snuggles into the couch and opens the book. The pages glow. The room blurs. He now sits on the couch, but it’s in a magical forest.",
+        north: 3,
+        south: 4,
+        east: 5,
+        west: 6,
         media: {
           type: "image",
-          src: "assets/images/test.jpg",
+          src: "assets/images/story-route-1.jpg",
           alt: "a dim prison cell"
         }
         
@@ -45,14 +45,14 @@ const rooms = [
     {
         id: 2, // Unique ID for this room
         name: "car", // Name of the room
-        description: "you wake in a cell there is a ....",
-        north: 4,
-        south: -1,
-        east: 0,
-        west: 3,
+        description: "Leo starts a video game but keeps eyeing the book. He finally powers down and picks it up, opening to the first page.",
+        north: 1,
+        south: 6,
+        east: -1,
+        west: -1,
         media: {
           type: "image",
-          src: "assets/images/test.jpg",
+          src: "assets/images/story-route-2.jpg",
           alt: "a dim prison cell"
         }
         
@@ -60,11 +60,11 @@ const rooms = [
     {
       id: 3, // Unique ID for this room
       name: "cell", // Name of the room
-      description: "you wake in a cell there is a ....",
-      north: 4,
-      south: -1,
-      east: 0,
-      west: 3,
+      description: "Leo steps off the couch with the book in his left hand. Two paths lie ahead—one leads to a glowing tree, the other to musical chimes.",
+      north: 7,
+      south: 8,
+      east: 6,
+      west: 15,
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -75,11 +75,11 @@ const rooms = [
     {
       id: 4, // Unique ID for this room
       name: "cell", // Name of the room
-      description: "you wake in a cell there is a ....",
-      north: 4,
-      south: -1,
-      east: 0,
-      west: 3,
+      description: "A blue-and-gold bird chirps Leo’s name. A glowing silver feather floats down. Leo clutches the book tighter and watches the bird land by a tree.",
+      north: 8,
+      south: 5,
+      east: 6,
+      west: 15,
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -90,11 +90,11 @@ const rooms = [
     {
       id: 5, // Unique ID for this room
       name: "cell", // Name of the room
-      description: "you wake in a cell there is a ....",
-      north: 4,
-      south: -1,
-      east: 0,
-      west: 3,
+      description: `“Leo…” a voice floats in the wind. A glowing silhouette appears — a gentle older woman with curly hair and a cloak, standing beside a small owl shape.`,
+      north: 7,
+      south: 9,
+      east: 6,
+      west: 15,
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -104,19 +104,160 @@ const rooms = [
     },
     {
       id: 6, // Unique ID for this room
-      name: "cell", // Name of the room
-      description: "you wake in a cell there is a ....",
-      north: 4,
-      south: -1,
-      east: 0,
-      west: 3,
+      name: "Name of this snippt is...", // Name of the room
+      description: `Leo opens the book. Golden letters appear:
+      “The Queen of Light waits beneath the oldest tree.”
+      A soft owl hoot echoes above.`,
+      north: 7,
+      south: 8,
+      east: 6,
+      west: 15,
       media: {
         type: "image",
         src: "assets/images/test.jpg",
-        alt: "a dim prison cell"
+        alt: "An image of Leo on his adventure"
       }
       
     },
+    {
+      id: 7, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `Leo reaches a glowing tree. His grandmother stands beside it with Oona, a silver owl with amber eyes.
+“You’ve made it,” she smiles.`,
+      north: 9,
+      south: 10,
+      east: 11,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 8, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `The bird leads Leo to a glowing hollow tree. Music hums inside. The book glows in sync. Oona watches silently from a branch above.`,
+      north: 12,
+      south: 13,
+      east: 6,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 9, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `“This book listens,” Oona says. “It shows what you’re ready to see.” The forest hums around them. Leo nods slowly.`,
+      north: 14,
+      south: 11,
+      east: 13,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 10, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `Leo opens the book. Golden letters appear:
+      “The Queen of Light waits beneath the oldest tree.”
+      A soft owl hoot echoes above.`,
+      north: 14,
+      south: 11,
+      east: 13,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 11, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `“Yes,” Grandma says softly. “I was the Queen of this land. The book is your bridge to everything I once protected.”`,
+      north: 14,
+      south: 12,
+      east: 13,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 12, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `“You must choose,” says Oona. “Adventure, Wisdom… or Home.” Leo looks at the book. It pulses with golden light.`,
+      north: 13,
+      south: 14,
+      east: 15,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 13, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `A jester appears. “Trade the book for a wish!” Leo frowns. “No thanks.” He clutches the book tighter.`,
+      north: 14,
+      south: 12,
+      east: 7,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 14, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `Leo walks into a quiet, cool forest. The silence is comforting. He feels at peace, though the path ahead is uncertain.`,
+      north: 6,
+      south: 9,
+      east: 12,
+      west: 15,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+    {
+      id: 15, // Unique ID for this room
+      name: "Name of this snippt is...", // Name of the room
+      description: `Leo finds himself back on the couch. The book rests in his lap. He’s home. But the glow hasn’t gone. His eyes sparkle...the story continues.`,
+      north: -1,
+      south: -1,
+      east: -1,
+      west: -1,
+      media: {
+        type: "image",
+        src: "assets/images/test.jpg",
+        alt: "An image of Leo on his adventure"
+      }
+      
+    },
+
 ]
 
 // We'll start in the first room (ID 0)
