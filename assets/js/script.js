@@ -239,9 +239,17 @@ function updateRoomMedia(roomId) {
         // Set the attributes for the image
         img.src = room.media.src;
         img.alt = room.media.alt || 'Room image';
+
+        img.classList.add('fade-out');
     
         // Add it to the container
         roomMedia.appendChild(img);
+
+        // Force browser to recognize the initial state
+        void img.offsetWidth;
+        
+        // Remove fade-out to trigger transition to visible
+        img.classList.remove('fade-out');
     
         console.log("Adding image to:", room.media.src)
       }
@@ -258,11 +266,19 @@ function updateRoomMedia(roomId) {
         // Set the attributes for the image
         img.src = room.media.src;
         img.alt = room.media.alt || 'Room image';
+
+        // Start with fade-out applied (invisible)
+        img.classList.add('fade-out');
     
         // Add it to the container
         roomMedia.appendChild(img);
     
-       
+       // Force browser to recognize the initial state
+        void img.offsetWidth;
+        
+        // Remove fade-out to trigger transition to visible
+        img.classList.remove('fade-out');
+      
       }
   }
 }

@@ -34,7 +34,8 @@ h1 {
 }
 
 #room-media {
-  max-width: 650px;
+  max-width: 750px;
+  height: 430px;
   overflow: hidden;
   border-radius: 50px;
   margin-bottom: 20px;
@@ -44,7 +45,7 @@ h1 {
 
 #room-media img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
