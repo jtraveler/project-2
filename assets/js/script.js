@@ -20,6 +20,12 @@ const rooms = [
         south: 2,
         east: -1,
         west: -1,
+        buttonText: {
+          north: "Investigate the faint light up north?",
+          south: "Check the door that's slightly ajar",
+          east: "Peek into the adjacent cell",
+          west: "Examine your own cell more carefully"
+        },
         media: {
           type: "image", 
           src: "assets/images/story-route-0.jpg", 
@@ -35,6 +41,12 @@ const rooms = [
         south: 4,
         east: 5,
         west: 6,
+        buttonText: {
+          north: "Investigate the faint light up north?",
+          south: "Check the door that's slightly ajar",
+          east: "Peek into the adjacent cell",
+          west: "Examine your own cell more carefully"
+        },
         media: {
           type: "image",
           src: "assets/images/story-route-1.jpg",
@@ -50,6 +62,12 @@ const rooms = [
         south: 6,
         east: -1,
         west: -1,
+        buttonText: {
+          north: "Investigate the faint light up north?",
+          south: "Check the door that's slightly ajar",
+          east: "Peek into the adjacent cell",
+          west: "Examine your own cell more carefully"
+        },
         media: {
           type: "image",
           src: "assets/images/story-route-2.jpg",
@@ -65,6 +83,12 @@ const rooms = [
       south: 8,
       east: 6,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -80,6 +104,12 @@ const rooms = [
       south: 5,
       east: 6,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -95,6 +125,12 @@ const rooms = [
       south: 9,
       east: 6,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -112,6 +148,12 @@ const rooms = [
       south: 8,
       east: 6,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -122,12 +164,17 @@ const rooms = [
     {
       id: 7, // Unique ID for this room
       name: "Name of this snippt is...", // Name of the room
-      description: `Leo reaches a glowing tree. His grandmother stands beside it with Oona, a silver owl with amber eyes.
-“You’ve made it,” she smiles.`,
+      description: `Leo reaches a glowing tree. His grandmother stands beside it with Oona, a silver owl with amber eyes.“You’ve made it,” she smiles.`,
       north: 9,
       south: 10,
       east: 11,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -143,6 +190,12 @@ const rooms = [
       south: 13,
       east: 6,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -158,6 +211,12 @@ const rooms = [
       south: 11,
       east: 13,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -175,6 +234,12 @@ const rooms = [
       south: 11,
       east: 13,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -190,6 +255,12 @@ const rooms = [
       south: 12,
       east: 13,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -205,6 +276,12 @@ const rooms = [
       south: 14,
       east: 15,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -220,6 +297,12 @@ const rooms = [
       south: 12,
       east: 7,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -235,6 +318,12 @@ const rooms = [
       south: 9,
       east: 12,
       west: 15,
+      buttonText: {
+        north: "Investigate the faint light up north?",
+        south: "Check the door that's slightly ajar",
+        east: "Peek into the adjacent cell",
+        west: "Examine your own cell more carefully"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -246,10 +335,13 @@ const rooms = [
       id: 15, // Unique ID for this room
       name: "Name of this snippt is...", // Name of the room
       description: `Leo finds himself back on the couch. The book rests in his lap. He’s home. But the glow hasn’t gone. His eyes sparkle...the story continues.`,
-      north: -1,
+      north: 0,
       south: -1,
       east: -1,
       west: -1,
+      buttonText: {
+        north: "The End. Would you like to start over?"
+      },
       media: {
         type: "image",
         src: "assets/images/test.jpg",
@@ -300,53 +392,65 @@ function handleExits(currentRoom) {
     // NORTH direction
     if (rooms[currentRoom].north != -1) {
         // There is an exit to the north
-        north.style.display = "block"; // Make button visible
+        north_shell.style.display = "block"; // Make button visible
         north.innerText = "Go North"; // Set button text
         console.log("North button text:", north.textContent)
+
+        // Update the north button with the custom text
+        north.innerText = rooms[currentRoom].buttonText.north;
 
         // When clicked, move to the room in that direction
         north.addEventListener('click', () => move(rooms[currentRoom].north));
     } else {
-        north.style.display = "none";
+        north_shell.style.display = "none";
     }
 
     // SOUTH direction
     if (rooms[currentRoom].south != -1) {
         // There is an exit to the south
-        south.style.display = "block"; // Make button visible
+        south_shell.style.display = "block"; // Make button visible
         south.innerText = "Go South"; // Set button text
         console.log("South button text:", south.textContent)
+
+        // Update the south button with the custom text
+        south.innerText = rooms[currentRoom].buttonText.south;
 
         // When clicked, move to the room in that direction
         south.addEventListener('click', () => move(rooms[currentRoom].south));
     } else {
-        south.style.display = "none";
+        south_shell.style.display = "none";
     }
 
     // EAST Direction
     if (rooms[currentRoom].east != -1) {
       // There is an exit to the east
-      east.style.display = "block"; // Make button visible
+      east_shell.style.display = "block"; // Make button visible
       east.innerText = "Go East"; // Set button text
       console.log("East button text:", east.textContent)
+
+      // Update the east button with the custom text
+      east.innerText = rooms[currentRoom].buttonText.east;
 
       // When clicked, move to the room in that direction
       east.addEventListener('click', () => move(rooms[currentRoom].east));
     } else {
-        east.style.display = "none";
+        east_shell.style.display = "none";
     }
 
     // WEST Direction
     if (rooms[currentRoom].west != -1) {
         // There is an exit to the west
-        west.style.display = "block"; // Make button visible
+        west_shell.style.display = "block"; // Make button visible
         west.innerText = "Go West"; // Set button text
         console.log("West button text:", north.textContent)
+
+        // Update the east button with the custom text
+        east.innerText = rooms[currentRoom].buttonText.east;
 
         // When clicked, move to the room in that direction
         west.addEventListener('click', () => move(rooms[currentRoom].west));
     } else {
-        west.style.display = "none";
+        west_shell.style.display = "none";
     }
 
     
