@@ -4,7 +4,14 @@ body {
   font-family: 'Poppins', san-serif;
   font-size: 16px;
   color: #2f1a00;
-  align-items: center;;
+  align-items: center;
+  background-image: url(assets/images/background-bottom-waves.svg);
+  background-position: bottom -193px right -10px;
+  background-size: 1849px;
+  background-repeat: no-repeat;
+
+
+  
 }
 
 header {
@@ -23,6 +30,10 @@ h1 {
     line-height: 50px;
 }
 
+#north_shell, #south_shell, #east_shell, #west_shell {
+
+  justify-content: center;
+}
 
 
 /* Additional styling for the game elements */
@@ -35,7 +46,7 @@ h1 {
 
 #room-media {
   max-width: 750px;
-  height: 430px;
+  height: 500px;
   overflow: hidden;
   border-radius: 50px;
   margin-bottom: 20px;
@@ -135,5 +146,9 @@ push it to the left if one of them is on the row by itself */
   #room-media img {
     height: 100%;
     max-width: unset;
+  }
+
+  #narrator {
+    min-height: fit-content;
   }
 }
