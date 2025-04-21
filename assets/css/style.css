@@ -5,13 +5,11 @@ body {
   font-size: 16px;
   color: #2f1a00;
   align-items: center;
-  background-image: url(assets/images/background-bottom-waves.svg);
-  background-position: bottom -193px right -10px;
-  background-size: 1849px;
+  background-image: url(https://jtraveler.github.io/project-2/assets/images/background-bottom-waves.svg);
+  background-position: top 407px right 0px;
+  background-size: 2150px;
   background-repeat: no-repeat;
 
-
-  
 }
 
 header {
@@ -31,8 +29,7 @@ h1 {
 }
 
 #north_shell, #south_shell, #east_shell, #west_shell {
-
-  justify-content: center;
+      justify-content: center;
 }
 
 
