@@ -97,7 +97,7 @@ const rooms = [
     description: "Leo steps off the couch with the book in his left hand. Two paths lie ahead—one leads to a glowing tree, the other to musical chimes.",
     north: 8,
     south: 6,
-    east: 15,
+    east: 16,
     west: -1,
     buttonText: {
       north: "Go to the glowing tree",
@@ -117,7 +117,7 @@ const rooms = [
     north: 9,
     south: 11,
     east: 6,
-    west: 15,
+    west: 16,
     buttonText: {
       north: "Go towards the first voice you heard",
       south: "Have a closer look at the talking owl",
@@ -172,16 +172,16 @@ const rooms = [
   },
   {
     id: 8,
-    name: "Queen of Light",
-    description: "Leo stands before a glowing tree. His grandmother appears in a warm light, regal yet gentle. Oona the owl rests beside her.",
-    north: 12,
-    south: 11,
-    east: 13,
+    name: "Finding Grandma",
+    description: "Leo stands before the glowing tree, its golden leaves shimmering like stars. His grandmother appears in a warm light, regal yet gentle. Oona the owl rests beside her.",
+    north: 14,
+    south: 18,
+    east: 12,
     west: 16,
     buttonText: {
-      north: "Hug grandma",
+      north: "Hug grandma and \nlearn more about Oona",
       south: "Ask about the tree",
-      east: "Ask Oona what to do next",
+      east: "I thought you died, but how...",
       west: "Return to the couch"
     },
     media: {
@@ -195,12 +195,12 @@ const rooms = [
     name: "The Trickster",
     description: `Leo meets a sketchy looking dude who interrupts him repeatedly, offering to trade for a better book. Though tempting, the deal seems risky. An owl swoops in and says "Don't listen to him, Leo!"`,
     north: 11,
-    south: 13,
+    south: 23,
     east: -1,
     west: -1,
     buttonText: {
-      north: `Say "No, I’ll keep mine"`,
-      south: `Ask "What’s in yours?"`,
+      north: `No, I’ll keep mine, \n(keeping a firm grip on the book)`,
+      south: `I can show you mine. \nWhat’s in yours?`,
     },
     media: {
       type: "image",
@@ -250,21 +250,21 @@ const rooms = [
   },
   {
     id: 12,
-    name: "Truth of the Queen",
-    description: "“Yes,” Grandma says softly. “I was the Queen of this land. The book is your bridge to everything I once protected.”",
-    north: 14,
-    south: 13,
-    east: 9,
+    name: "I Though You Died",
+    description: "“Yes, I did” Grandma says softly. “I was the Queen of this land but since my passing, I'm able to come back to be an advisor. The book is your bridge to everything I once protected.”",
+    north: 22,
+    south: 14,
+    east: 18,
     west: 16,
     buttonText: {
-      north: "Ask how she lost the land",
-      south: "Ask if he’s the next Guardian",
-      east: "Ask why Oona stayed",
+      north: "Show me what I have to do next",
+      south: "Hug grandma and \nlearn more about Oona",
+      east: "Ask about the tree",
       west: "Return to the couch"
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-11.jpg",
+      src: "assets/images/story-route-18-about-the-tree.jpg",
       alt: "Leo reunited with his grandmother under the glowing tree"
     }
   },
@@ -290,21 +290,21 @@ const rooms = [
   },
   {
     id: 14,
-    name: "The Trickster's Test",
-    description: "A jester appears: 'Trade the book for a wish!' Leo holds the book tighter and shakes his head.",
-    north: 11,
-    south: 7,
-    east: 8,
+    name: "Hugging Grandma",
+    description: `Leo hugs grandma with a tight embrace. Grandma says "Oh how I missed you, Leo!". She then says "I see that you already met Oona, she is my most trusted friend and she will help guide you".`,
+    north: 18,
+    south: 12,
+    east: 22,
     west: 16,
     buttonText: {
-      north: "Challenge with a riddle",
-      south: "Trick him with a fake book",
-      east: "Run toward the tree",
+      north: "Ask about the tree",
+      south: "I thought you died, but how...",
+      east: "Show me what I have to do next",
       west: "Return to the couch"
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-13.jpg",
+      src: "assets/images/story-route-14-hugging-grandma.jpg",
       alt: "Leo encounters a mischievous jester in the forest"
     }
   },
@@ -342,28 +342,146 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-15.jpg",
+      src: "assets/images/story-route-2-magical-nap-at-home.jpg",
       alt: "Leo waking up back on the couch, still holding the glowing book"
     }
   },
   {
     id: 17,
     name: "Talk with the parents",
-    description: "Leo instantly jumps up and tells his parents about the book. He's talking so fast from excitement, they can barely make out what he is trying to say. They both smile at each other and Leo's dad says 'slow down now', we take it that you're enjoying the book. Leo shouts instantly, 'yes, I want to continue reading it! But first I need to take a nap.'",
+    description: `Leo excitedly tells his parents about the book, speaking so rapidly they can barely understand. They smile at each other. "Slow down," his dad says. "I see you're enjoying it." Leo shouts, "Yes! I want to keep reading, but first I need a nap!"`,
     north: 0,
     south: 2,
     east: -1,
     west: -1,
     buttonText: {
       north: "The End. Would you like to start over?",
-      south: "Lay down on the couch and take a nap"
+      south: "Lay down on the \ncouch to take a nap"
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-15.jpg",
+      src: "assets/images/parents-and-Leo-in-the-kitchen.jpg",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
-  }
+  },
+  {
+    id: 18,
+    name: "About the Glowing Tree",
+    description: "“Why is this tree glowing?” Leo asks. She smiles gently. “Because this is where stories are remembered. It’s where I first held the book, just like you.”",
+    north: 19,
+    south: 21,
+    east: 16,
+    west: 22,
+    buttonText: {
+      north: "Can I see your memories in the book?",
+      south: "Why do I feel a such a \nstrong connection to the tree",
+      east: "Return to the couch",
+      west: "Show me what I have to do next"
+    },
+    media: {
+      type: "image",
+      src: "assets/images/general-grandmother-talking.jpg",
+      alt: "Leo instantly jumps up and tells his parents about the book."
+    }
+  },
+  {
+    id: 19,
+    name: "The Memory Pages",
+    description: "Leo opens the book. Its pages shimmer, then swirl into glowing images. He sees his grandmother as a young girl — laughing, discovering the book, and meeting Oona. “These are my memories,” she whispers. “They’re yours to keep.”",
+    north: 20,
+    south: 2,
+    east: 16,
+    west: 22,
+    buttonText: {
+      north: "Ask Grandma why she \nstopped using the book",
+      south: "Close the book and look around",
+      east: "Return to the couch",
+      west: "Show me what I have to do next"
+    },
+    media: {
+      type: "image",
+      src: "assets/images/book-open.jpg",
+      alt: "Leo instantly jumps up and tells his parents about the book."
+    }
+  },
+  {
+    id: 20,
+    name: "The Closed Chapter",
+    description: "Grandma’s eyes shimmer. “I didn’t stop using it… it stopped showing me new pages. The land grew quiet. I knew it was waiting—for you.” She gently places her hand on Leo’s. “The story needed your heart now, not mine.”",
+    north: 22,
+    south: 2,
+    east: 21,
+    west: 16,
+    buttonText: {
+      north: "Show me what I have to do next",
+      south: "Close the book and look around",
+      east: "Why do I feel a such a \nstrong connection to the tree",
+      west: "Return to the couch",
+    },
+    media: {
+      type: "image",
+      src: "assets/images/story-route-18-about-the-tree.jpg",
+      alt: "Leo instantly jumps up and tells his parents about the book."
+    }
+  },
+  {
+    id: 21,
+    name: "Strong Connection With the Tree",
+    description: `Leo asks softly: "Why do I sense such a strong connection with the tree?" Grandma touches the book. "It remembers you. It waited for someone with curiosity and courage—just like I once had."`,
+    north: 20,
+    south: 22,
+    east: 16,
+    west: 21,
+    buttonText: {
+      north: "Ask Grandma why she \nstopped using the book",
+      south: "Show me what I have to do next",
+      east: "Return to the couch",
+      west: "Why do I feel a such a \nstrong connection to the tree",
+    },
+    media: {
+      type: "image",
+      src: "assets/images/story-route-18-about-the-tree.jpg",
+      alt: "Leo instantly jumps up and tells his parents about the book."
+    }
+  },
+  {
+    id: 22,
+    name: "The Next Step",
+    description: `Leo asks "What now?" Grandma smiles. "That's up to you, brave boy." Oona nods. "The book guides you but it's your heart decides which page comes next." `,
+    north: 0,
+    south: 2,
+    east: 16,
+    west: 16,
+    buttonText: {
+      north: "Then I want to explore more",
+      south: "Can I go home and come back?",
+      east: "Will I see you again?",
+      west: "Return to the couch",
+    },
+    media: {
+      type: "image",
+      src: "assets/images/General-Leo-Grandmother-Oona.jpg",
+      alt: "Leo instantly jumps up and tells his parents about the book."
+    }
+  },
+  {
+    id: 23,
+    name: "The Trickster Runs",
+    description: `Just as Leo kindly shares his book witht the dude, he snatches it out of Leo's hands, throw down his fake book and bolts off with Leo's book!"`,
+    north: 11,
+    south: 13,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: `Keep running after him`,
+      south: `Give up and turn around`,
+    },
+    media: {
+      type: "image",
+      src: "assets/images/The-Trickster---Running.jpg",
+      alt: "Leo on a quiet path with a glowing sign"
+    }
+  },
 ];
 
 

@@ -121,13 +121,14 @@ push it to the left if one of them is on the row by itself */
   border-radius: 50px;
   width: 100%;
   padding: 20px;
-  border: solid 2px #ffebaf;
+  border: solid 2px #d66a1e;
   transition: background-color .5s ease-in-out;
   transition: border .8s ease-in-out;
   
 }
 
 .direction-button:hover {
+  background-color: #ffdf79;
   border: solid 2px #d66a1e;
   
 }
