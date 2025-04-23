@@ -22,11 +22,12 @@ const rooms = [
     description: `Leo's parents hand him a dusty book. "It belonged to your grandmother," his mom says. Leo clutches it with curiosity.`,
     north: 1,
     south: 3,
-    east: -1,
+    east: 27,
     west: -1,
     buttonText: {
       north: "Read the book",
-      south: "Go play video games"
+      south: "Go play video games",
+      east: "shortcut to 27"
     },
     media: {
       type: "image",
@@ -37,14 +38,14 @@ const rooms = [
   {
     id: 1,
     name: "Into the Book",
-    description: `Leo snuggles against the couch and opens the book. The pages begin to glow. He reads the book for hours and hours but begins to get drowsy.`,
+    description: `Leo snuggles against the couch and opens the book and starts to flip through it. He is intrigued and the pages begin to glow. He reads the book for hours and hours but begins to get drowsy.`,
     north: 2,
     south: 17,
     east: -1,
     west: -1,
     buttonText: {
       north: "Lay down, take a nap \nfor a pleasant dream",
-      south: "Ask mom and dad about the book"
+      south: "Tell mom and dad about the book"
     },
     media: {
       type: "image",
@@ -77,12 +78,12 @@ const rooms = [
     name: "The Distraction",
     description: "Leo starts a video game but keeps eyeing the book. He finally powers down and picks it up, opening to the first page.",
     north: 1,
-    south: 16,
+    south: 1,
     east: -1,
     west: -1,
     buttonText: {
       north: "Open the book",
-      south: "Flip through it randomly"
+      south: "Flip through the book randomly"
     },
     media: {
       type: "image",
@@ -356,7 +357,7 @@ const rooms = [
     west: -1,
     buttonText: {
       north: "The End. Would you like to start over?",
-      south: "Lay down on the \ncouch to take a nap"
+      south: "Lay down to take a nap"
     },
     media: {
       type: "image",
@@ -448,7 +449,7 @@ const rooms = [
     id: 22,
     name: "The Next Step",
     description: `Leo asks "What now?" Grandma smiles. "That's up to you, brave boy." Oona nods. "The book guides you but it's your heart decides which page comes next." `,
-    north: 0,
+    north: 27,
     south: 2,
     east: 16,
     west: 16,
@@ -467,8 +468,8 @@ const rooms = [
   {
     id: 23,
     name: "The Trickster Runs",
-    description: `Just as Leo kindly shares his book witht the dude, he snatches it out of Leo's hands, throw down his fake book and bolts off with Leo's book!"`,
-    north: 11,
+    description: `Just as Leo kindly shares his book with the dude, he snatches it out of Leo's hands and throws down his fake book. Then he bolts off with Leo's book. Leo begins to chase the dude saying "Hey, give it back!"`,
+    north: 24,
     south: 13,
     east: -1,
     west: -1,
@@ -480,6 +481,171 @@ const rooms = [
       type: "image",
       src: "assets/images/The-Trickster---Running.jpg",
       alt: "Leo on a quiet path with a glowing sign"
+    }
+  },
+  {
+    id: 24,
+    name: "The Trickster In Trouble",
+    description: `Suddenly out of no where a deep cliff appears ahead. The dude is running too fast and Leo watches him fall over the cliff! Leo arrives to find the dude hanging off of the cliff screaming "Help me, I'm scared of heights!"`,
+    north: 25,
+    south: 26,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: `Reach out your hand \nand save the dude`,
+      south: `Let him be, he looks like \nhe can easily save himself`,
+    },
+    media: {
+      type: "image",
+      src: "assets/images/The-Trickster---Off-the-Cliff.jpg",
+      alt: "Leo on a quiet path with a glowing sign"
+    }
+  },
+  {
+    id: 25,
+    name: "Leo Saves the Trickster",
+    description: `Leo helps the dude off the cliff to safety. Grateful, the dude apologizes and explains he only wanted the book to read the famous stories to his younger siblings. Leo offers to read to them himself sometime. The dude is delighted and Leo goes on his way.  `,
+    north: 11,
+    south: 13,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: `Keep running after him`,
+      south: `Give up and turn around`,
+    },
+    media: {
+      type: "image",
+      src: "assets/images/The-Trickster---And-Leo-Talking.jpg",
+      alt: "Leo on a quiet path with a glowing sign"
+    }
+  },
+  {
+    id: 26,
+    name: "Leaving the dude behind (clone of ID 4)",
+    description: "Leo leaves the dude behind and he gets far away from him as possible. Then suddenly, he sees two paths lie ahead—one leads to a glowing tree, the other to musical chimes.",
+    north: 8,
+    south: 6,
+    east: 16,
+    west: -1,
+    buttonText: {
+      north: "Go to the glowing tree",
+      south: "Follow the musical sound",
+      east: "Return to the couch"
+    },
+    media: {
+      type: "image",
+      src: "assets/images/story-route-4-two-paths.jpg",
+      alt: "Leo holding a book in a magical glowing forest"
+    }
+  },
+  {
+    id: 27,
+    name: "Leaving Grandma and Oona",
+    description: "Leo says goodbye to his grandmother and Oona and continues on his way. Up ahead he sees what looks like a sign. He also hears a faint voice in the distance.",
+    north: 28,
+    south: 29,
+    east: 16,
+    west: -1,
+    buttonText: {
+      north: "Go see what the sign says",
+      south: "Follow the sound of the faint voice",
+      east: "Return to the couch"
+    },
+    media: {
+      type: "image",
+      src: "assets/images/leo-walking-general-poses-and-settings-happy.jpg",
+      alt: "Leo holding a book in a magical glowing forest"
+    }
+  },
+  {
+    id: 28,
+    name: "Where Is Your Heart",
+    description: `Leo walks further down the path to a sign that reads "Where Is Your Heart". He thinks to himself "what could this mean". Ahh, he thinks he knows! He continues onwards.`,
+    north: 16,
+    south: 31,
+    east: 16,
+    west: -1,
+    buttonText: {
+      north: "With my family",
+      south: "In this magical place",
+      east: "Wherever the story takes me"
+    },
+    media: {
+      type: "image",
+      src: "assets/images/where-is-your-heart-sign.jpg",
+      alt: "Leo holding a book in a magical glowing forest"
+    }
+  },
+  {
+    id: 29,
+    name: "Unicorn and Girl Stuck In Mud",
+    description: `Leo walks quite some distance as the landscape changes and he comes across a girl with her unicorn stuck in the mud. She yells "Can you help get us out?!"`,
+    north: 28,
+    south: 30,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: "I don't think I can help, \nsorry but I must be on my way",
+      south: "Hold on, I'll get \nyou both out of there!",
+    },
+    media: {
+      type: "image",
+      src: "assets/images/unicorl-girl-stuck.jpg",
+      alt: "Leo holding a book in a magical glowing forest"
+    }
+  },
+  {
+    id: 30,
+    name: "Unicorn and Girl Freed",
+    description: `Leo looked around for a rescue tool, then remembered reading about this place. He found rope hidden in the bushes, using it to pull them out. "Oh thank you, my hero!" the girl exclaimed.`,
+    north: 28,
+    south: 16,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: "No problem! I wish I \ncould chat but I'm on a mission",
+      south: "Return to the couch",
+    },
+    media: {
+      type: "image",
+      src: "assets/images/unicorl-girl-freed.jpg",
+      alt: "Leo holding a book in a magical glowing forest"
+    }
+  },
+  {
+    id: 31,
+    name: "In this Magical Kingdom",
+    description: `Leo reaches a forest clearing and approaches a cliff, gazing at the most pristine land he's ever seen. It was love at first sight—in his heart, he knew this place was home. The adventure is just beginning...`,
+    north: 0,
+    south: -1,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: "The End (for now). Go back to the \nbeginning to explore another adventure",
+    
+    },
+    media: {
+      type: "image",
+      src: "assets/images/leo-overlooking-magical-kingdom.jpg",
+      alt: "Leo holding a book in a magical glowing forest"
+    }
+  },
+  {
+    id: 32,
+    name: "Wherever the Story Takes Me",
+    description: `Leo reaches a forest clearing and approaches a cliff, gazing at the most pristine land he's ever seen. It was love at first sight—in his heart, he knew this place was home. The adventure is just beginning...`,
+    north: 0,
+    south: -1,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: "The End (for now). Go back to the \nbeginning to explore another adventure",
+    
+    },
+    media: {
+      type: "image",
+      src: "assets/images/leo-overlooking-magical-kingdom.jpg",
+      alt: "Leo holding a book in a magical glowing forest"
     }
   },
 ];
