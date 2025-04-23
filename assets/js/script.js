@@ -470,12 +470,12 @@ const rooms = [
     name: "The Trickster Runs",
     description: `Just as Leo kindly shares his book with the dude, he snatches it out of Leo's hands and throws down his fake book. Then he bolts off with Leo's book. Leo begins to chase the dude saying "Hey, give it back!"`,
     north: 24,
-    south: 13,
+    south: 16,
     east: -1,
     west: -1,
     buttonText: {
-      north: `Keep running after him`,
-      south: `Give up and turn around`,
+      north: `Continue running after him`,
+      south: `Give up, go home and wake \nup from this bad dream`,
     },
     media: {
       type: "image",
@@ -563,7 +563,7 @@ const rooms = [
     description: `Leo walks further down the path to a sign that reads "Where Is Your Heart". He thinks to himself "what could this mean". Ahh, he thinks he knows! He continues onwards.`,
     north: 16,
     south: 31,
-    east: 16,
+    east: 32,
     west: -1,
     buttonText: {
       north: "With my family",
@@ -633,7 +633,7 @@ const rooms = [
   {
     id: 32,
     name: "Wherever the Story Takes Me",
-    description: `Leo reaches a forest clearing and approaches a cliff, gazing at the most pristine land he's ever seen. It was love at first sight—in his heart, he knew this place was home. The adventure is just beginning...`,
+    description: `Leo finds a comfy spot to sit down to read the book and let the stories inspire his journey. And what a pleasant surprise, Oona has swooped in to offer any guidance. Her and Leo have a very long conversation about the stories in the book and now Leo knows where he wants to go.`,
     north: 0,
     south: -1,
     east: -1,
@@ -644,7 +644,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/leo-overlooking-magical-kingdom.jpg",
+      src: "assets/images/leo-sitting-with-oona-reading-the-book.jpg",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
