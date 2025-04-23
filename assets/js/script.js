@@ -22,12 +22,11 @@ const rooms = [
     description: `Leo's parents hand him a dusty book. "It belonged to your grandmother," his mom says. Leo clutches it with curiosity.`,
     north: 1,
     south: 3,
-    east: 27,
+    east: -1,
     west: -1,
     buttonText: {
       north: "Read the book",
       south: "Go play video games",
-      east: "shortcut to 27"
     },
     media: {
       type: "image",
@@ -233,15 +232,14 @@ const rooms = [
     id: 11,
     name: "Oona’s Return",
     description: `Oona swoops down. "I am Oona, we've been expecting you, Leo. Hold on to the book, every page you turn writes your story,” she says. “But only your heart can choose the end.” She winks.`,
-    north: 12,
-    south: 15,
-    east: 13,
-    west: 16,
+    north: 8,
+    south: 6,
+    east: 16,
+    west: -1,
     buttonText: {
-      north: "Ask what happens next",
-      south: `Say "I'm not ready"`,
-      east: "Ask about the book",
-      west: "Return to the couch"
+      north: "Go to the glowing tree",
+      south: "Follow the musical sound",
+      east: "Return to the couch"
     },
     media: {
       type: "image",
