@@ -856,3 +856,47 @@ function move(destination) {
     console.log("You're in room: ", destination, rooms[destination].name);
 }
 gameMaster();
+
+
+
+
+// Add this function anywhere in your JavaScript file
+function implementBackButton() {
+  // Self-contained back button implementation
+  let roomHistory = [];
+  const back = document.getElementById('back');
+  const back_shell = document.getElementById('back_shell');
+  const roomNumber = document.getElementById('room-number');
+
+  // Override the move function to track history
+  const originalMove = move;
+  move = function(destination) {
+      roomHistory.push(currentRoom);
+      originalMove(destination);
+  };
+
+  // Add back button handler in gameMaster
+  const originalGameMaster = gameMaster;
+  gameMaster = function() {
+      originalGameMaster();
+      
+      // Update room number display
+      roomNumber.textContent = `Room: ${currentRoom}`;
+      
+      // Handle back button
+      if (roomHistory.length > 0) {
+          back_shell.style.display = "block";
+          const backClone = replaceButton(back);
+          backClone.addEventListener('click', () => {
+              const previousRoom = roomHistory.pop();
+              currentRoom = previousRoom;
+              gameMaster();
+          });
+      } else {
+          back_shell.style.display = "none";
+      }
+  };
+}
+
+// Call this function to activate the back button
+implementBackButton();

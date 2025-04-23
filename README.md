@@ -27,8 +27,12 @@ The story begins with Leo's parents giving him mysterious old children's book th
 3. [Illustrations](#illustrations)
 4. [Deployment](#deployment)
 5. [Features](#features)
-6. [Technologies Used](#technologies-used)
-7. [Credits and Reference](#credits-and-reference)
+6. [Testing](#testing)
+    - [Browser Testing](#browser-testing)
+    - [Code Validation](#code-validation)
+    - [Lighthouse Test](#lighthouse-testing)
+7. [Technologies Used](#technologies-used)
+8. [Credits and Reference](#credits-and-reference)
 
 ## User Experience UX
 
@@ -230,12 +234,16 @@ function gameMaster() {
 
 ### Room Descriptions and Storytelling
 
-Each room of the game is very unique and carefully crafted to describe what each room is and what it has. All of the rooms play a key part in our storytelling as the user moves from room to room.
+Each room of the game is very unique and carefully crafted to describe what each room is and what it has. All of the rooms play a key part in our storytelling as the user moves from room to room. Here is the main code that handles that:
 
 javascriptfunction readDescrption(currentRoom) {
     narrator.innerText = rooms[currentRoom].description;
 }
 
+
+
+
+![room-descriptions-storytelling](assets/images/for-readme/room-descriptions-storytelling.jpg)
 
 ### Event Handling for User Interactions
 
@@ -243,111 +251,149 @@ The interactivity is reliant on listening out for button clicks from the user's 
 
 north.addEventListener('click', () => move(rooms[currentRoom].north));
 
+This is a very rough flowchart explains the event handling for User interactions: 
+
+![room-descriptions-storytelling](assets/images/for-readme/event-handling.jpg)
+
+
+
+## Testing
+
+
+### Browser Testing
+
+
+I used Home Devices and ['Browser Stack'](browserstack.com) to test on different web browsers. Example tests below.
+<table>
+  <thead>
+    <tr>
+      <th>Browser</th>
+      <th>Device</th>
+      <th>Appearance</th>
+      <th>Responsiveness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td>iPhone 15 and Desktop Surface 5</td>
+      <td>The page is displaying correctly and the buttons work well.</td>
+      <td>Responsive design / Works Well</td>
+    </tr>
+    <tr>
+       <td>Safari</td>
+       <td>iPad 10 and Desktop Macook Pro</td>
+      <td>The page is displaying correctly and the buttons work well.</td>
+      <td>Responsive design / Works Well</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td>Galaxy and Desktop Macbook Air</td>
+      <td>The page is displaying correctly and the buttons work well.</td>
+      <td>Responsive design / Works Well</td>
+    </tr>
+ 
+  </tbody>
+</table>
+
+
+
+## Responsive Testing
+
+<table>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Max-Width 575px Result (Small Mobile)</th>
+      <th>Min-Width 576px Result (Large Mobile)</th>
+      <th>Min-Width 768px Result (Tablet)</th>
+      <th>Min-Width 992px and Larger Result (Desktop)</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Galaxy Fold</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>The page is displaying correctly and the buttons work well.</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+       <td>iPhone 15 </td>
+       <td>N/A</td>
+      <td>N/A</td>
+      <td>The page is displaying correctly and the buttons work well.</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>iPad Air</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>The page is displaying correctly and the buttons work well.</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+    <td>Macbook Air</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>The page is displaying correctly and the buttons work well.</td>
+    <td>N/A</td>
+ 
+  </tbody>
+</table>
 
 
 
 
-Credits:
+## Device Formats
 
-My mentor Spencer Barriball for the encouragment, guidance and helping with the base code concept. 
+iPad:
+![ipad](assets/images/for-readme/device-ipad.jpg)
 
-Man walking created by Sofia Drankovich
-(https://lottiefiles.com/free-animation/waling-men-listening-podcast-)
+iPhone:
+![iphone 15](assets/images/for-readme/device-mobile.jpg)
 
-Idle Dog created by Zachary Christensen
-(https://lottiefiles.com/free-animation/norm-the-dog-buvwpY646G)
+Galaxy Fold:
+![galaxy phone](assets/images/for-readme/device-mobile-fold.jpg)
 
-Proud Dog created by Syed Asim Ali Shah
-(https://lottiefiles.com/free-animation/dog-walking-7K4JCxjvHm)
 
-Woman kissing do creatd by Sabrina Picco
-(https://lottiefiles.com/free-animation/happy-dog-day-AJlBp9pdM7)
+## Code Validation
 
-Mailing Evelope creatd by GW
-(https://lottiefiles.com/free-animation/mail-EjwVwj9a0h)
+### HTML Validation
+![html-validation](assets/images/for-readme/validation-html.png)
+## CSS Validation
+![css-validation](assets/images/for-readme/validation-css.png)
 
-## Background Pattern
 
-I used a playful paw shape for the background of the headers.
+## Lighthouse Testing
+### Lighthouse Test Mobile - Homepage
+![lighthouse-mobile](assets/images/for-readme/lighthouse.jpg)
 
-Image created by starline on Freepik
-(https://tinyurl.com/mwxwjv6k)
+### Lighthouse Test Desktop - Homepage
+![lighthouse-desktop](assets/images/for-readme/lighthouse-desktop.jpg)
 
-![backgorund-image](assets/images/for-readme/backgorund-paws.jpg)
 
-### Navigation Menu
-
-The navigation is very simplistic and and most importantly, responsive. It reflects the branding with displaying the logo and brand colors.
-
-- The navigation on the mobile view is hidden but it's revealed once the user clicks on the hamburger menu icon on the right side.
-
-- The hamburger menu icon is hidden on the tablet and desktop views allowing the user to see all of the menue items at once.
-
-### Mobile Nav Bar
-
-![mobile-nav](assets/images/for-readme/navigation-mobile.jpg)
-
-### Desktop Nav Bar
-
-![desktop-nav](assets/images/for-readme/navigation-desktop.jpg)
-
-### Icons Used
-
-I used icons from Font Awesome and Freepik
-
-(https://fontawesome.com/)
-
-Stars icons from Freepik
-
-(https://tinyurl.com/jecd6jja)
-
-![icons-used](assets/images/for-readme/icons-used.jpg)
-
-### Images Used
-
-I used Midjourney for generatying all of the images on the website. I wanted to go for classy studio style images that I could easily cutout the background.
-
-(https://www.midjourney.com/)
-
-Image examples:
-
-![icons-used](assets/images/for-readme/images-used.jpg)
-
-### Footer
-
-The footer is simplistic and displays the navigation at all times. I used a footer template from MDG.
-
-- I made sure that the logo is displayed
-- A brief paragraph what the company is about
-- Navigation link
-- Contact information
-
-Credit:
-
-https://mdbootstrap.com/docs/standard/navigation/footer/
-
-![footer](assets/images/for-readme/footer.jpg)
+### Testing Errors and Improvements
+I think converting the jpgs to webp format would have improved my score
 
 ## Technologies Used
-
 ### Languages
-
-HTML and CSS languages only.
+JavaScript, HTML and CSS languages.
 
 ### Technology
-
 Github and Gitpod.
 
 ## Credits and Reference
 
+My mentor Spencer Barriball for the encouragment, guidance and helping with the base code concept. 
+
 Throughout the website build I used the following sources:
 
-- I used example code from Code Institute projects
+- Example code from Code Institute Love Running Project
 - [W3Schools.com](https://www.w3schools.com/)
-- [Midjourney.com](https://midjourney.com/) for all images
-- [Freepik](https://www.freepik.com/) for favicon design
+- [Unsplash.com](https://canva.com/) for all images
+- [Chatgpt](https://www.chatgpt.com/) for favicon design
 
 ## Author
-
 Matthew Johnson
-# love-maths
